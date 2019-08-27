@@ -1,5 +1,5 @@
-# First KIWI "KiwiPower!") project
-![alt text](https://github.com/codersCampKiwiTeam/Weather-App/blob/master/src/images/kiwiLogo.jpg)                  
+# First KIWI  project
+![alt text](https://github.com/codersCampKiwiTeam/Weather-App/blob/master/src/images/kiwiLogo.jpg "KiwiPower!")                  
 
 ## Weather-App
 Application that shows weather parameters (like `temperature`, `moisure` or `cloudiness`) in provided by user city.
