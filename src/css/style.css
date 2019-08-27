@@ -1,7 +1,44 @@
 body {
-    background-color: #bbbbbb;
+    background: url(../images/cloud.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    height: 100vh;
 }
 
-h1 {
-    background-color: aquamarine;
+.main-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: auto;
+    border-radius: 20px;
+    height: 95vh;
+}
+
+.search-container {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    height: 25px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+div {
+    border: 1px solid red;
+}
+
+#icon {
+    width: 50px;
+    height: 50px;
+}
+
+@media (min-width: 768px) {
+    .main-container {
+        width: 750px;
+        height: 75vh;
+    }
 }
