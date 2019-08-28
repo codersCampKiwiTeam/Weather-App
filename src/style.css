@@ -64,7 +64,7 @@ table {
 
 body {
     font-family: 'Lato', sans-serif;
-    background: url(../images/cloud.jpg);
+    background: url(images/cloud.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -94,11 +94,6 @@ input {
 
 div {
     border: 1px solid red;
-}
-
-#icon {
-    width: 50px;
-    height: 50px;
 }
 
 @media (min-width: 768px) {
