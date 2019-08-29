@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,43 +11,79 @@
     <script defer src="js/script.js"></script>
     <title>Weather App</title>
 </head>
+
 <body>
     <div class="main-container">
-        <div class="search-container">
-            <input type="text" placeholder="Wyszukaj miejscowość">
-        </div>
-        <div class="current-weather-container">
-            <div class="current-day">
-                <div class="city">Wrocław</div>
-                <div class="current-date">Pon, 06.09.2019</div>
-                <div class="current-temperature">31°C</div>
-                <div class="current-temperature-desc">Gorąco</div>
-            </div>
-            <div class="current-day">
-                <canvas id="icon">Kręcące się słońce</canvas>
+        <div class="con-2">
+            <div class="con-3">
+                <h1 class="header"></h1>
+                <input type="text" placeholder="Wyszukaj miejscowość">
             </div>
         </div>
-        <div class="next-days-container">
-            <div class="next-days-header">Kolejne dni</div>
-            <div class="next-day">
-                <div class="next-day-date">07.09.2019</div>
-                <div class="next-day-temperature">31°C</div>
-                <div class="next-day-icon">Słoneczko</div>
-                <div class="next-day-desc">Słonecznie</div>
+
+        <div class="con-2">
+            <div class="con-3">
+                <h1 class="city"></h1>
+                <h2 class="currentDay"></h2>
+                <h2 class="dayOfTheWeek"></h2>
+                <div class="con-4">
+                    <h1 class="temp"></h1>
+                </div>
+                <h2 class="sun"></h2>
+                <div class="con-4">
+                    <div class="con-img">
+                        <img src="#" alt="#">
+                    </div>
+                    <div class="con-5">
+                        <h4 class="day"></h4>
+                        <h3 class="temp"></h3>
+                    </div>
+                    <h2 class="sky"></h2>
+                </div>
             </div>
-            <div class="next-day2">
-                <div class="next-day-date">08.09.2019</div>
-                <div class="next-day-temperature">31°C</div>
-                <div class="next-day-icon">Chmurka</div>
-                <div class="next-day-desc">Pochmurnie</div>
-            </div>
-            <div class="next-day3">
-                <div class="next-day-date">09.09.2019</div>
-                <div class="next-day-temperature">31°C</div>
-                <div class="next-day-icon">Burza</div>
-                <div class="next-day-desc">Burza z piorunami</div>
+        </div>
+
+        <div class="con-2">
+            <div class="con-3">
+                <div class="con-4">
+                    <h3 class="date"></h3>
+                    <div class="con-4">
+                        <div class="con-5">
+                            <h4 class="temp"></h4>
+                            <h4 class="sky"></h4>
+                        </div>
+                        <div class="con-img">
+                            <img src="#" alt="#">
+                        </div>
+                    </div>
+                </div>
+                <div class="con-4">
+                    <h3 class="date"></h3>
+                    <div class="con-4">
+                        <div class="con-5">
+                            <h4 class="temp"></h4>
+                            <h4 class="sky"></h4>
+                        </div>
+                        <div class="con-img">
+                            <img src="#" alt="#">
+                        </div>
+                    </div>
+                </div>
+                <div class="con-4">
+                    <h3 class="date"></h3>
+                    <div class="con-4">
+                        <div class="con-5">
+                            <h4 class="temp"></h4>
+                            <h4 class="sky"></h4>
+                        </div>
+                        <div class="con-img">
+                            <img src="#" alt="#">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
