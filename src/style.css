@@ -1,109 +1,159 @@
-/*
-    http://meyerweb.com/eric/tools/css/reset/
-    v2.0 | 20110126
-    License: none (public domain)
-*/
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900&display=swap');
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
+html {
+    box-sizing: border-box;
 }
 
-ol,
-ul {
-	list-style: none;
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
-
-blockquote,
-q {
-	quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: '';
-	content: none;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-* {
-	box-sizing: border-box;
-}
-
-/* --Main code-- */
 
 body {
-    font-family: 'Lato', sans-serif;
-    background: url(../images/cloud.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     color: white;
-    height: 100vh;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
 }
 
 .main-container {
-    background-color: rgba(0, 0, 0, 0.5);
-    margin: auto;
-    border-radius: 20px;
-    height: 95vh;
+    background-image: url(../src/images/sunny_day.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 930px;
+    border: 2px solid red;
 }
 
-.search-container {
-    height: 150px;
+.con-a {
     display: flex;
     justify-content: center;
+    width: 100%;
+    border: 1px solid blue;
+}
+
+.con-b {
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid brown;
+}
+
+.header {
+    margin: 42px auto 20px auto;
+}
+
+.search {
+    font-size: 24px;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+}
+
+.con-c {
+    width: 80%;
+    border: 2px solid purple;
+}
+
+.con-d {
+    width: 40%;
+    border: 2px solid orange;
+}
+
+.con-e {
+    display: flex;
+    justify-content: center;
+    border: 2px solid yellow;
+}
+
+.con-f {
+    display: flex;
+    color: whitesmoke;
+    text-shadow: 1px 1px 1px rgba(172, 172, 172, 0.308);
+    background: #104156;
+    border-radius: 12px;
+}
+
+.con-g {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-input {
-    height: 25px;
-    border-radius: 5px;
-    width: 300px;
+.sky {
+    margin: auto auto;
+    font-size: 36px;
 }
 
-div {
-    border: 1px solid red;
+.con-h {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: #486BA0;
+    border: 2px solid purple;
 }
 
-#icon {
-    width: 50px;
-    height: 50px;
+.con-i {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid blue;
 }
 
-@media (min-width: 768px) {
-    .main-container {
-        width: 750px;
-        height: 75vh;
-    }
+.con-img {
+    display: flex;
+    align-items: center;
+}
+
+.fa-moon {
+    padding: 16px;
+    font-size: 32px;
+}
+
+.con-k {
+    display: flex;
+    border: 2px solid black;
+}
+
+.con-m {
+    display: flex;
+    border: 2px solid black;
+}
+
+.con-img2 {
+    display: flex;
+    align-items: center;
+}
+
+.con-img3 {
+    display: flex;
+    align-items: center;
+}
+
+.con-p {
+    display: flex;
+    border: 2px solid black;
+}
+
+.con-img4 {
+    display: flex;
+    align-items: center;
+}
+
+.day {
+    font-size: 32px;
+    margin: 0;
+}
+
+.temp2 {
+    margin-bottom: 8px;
+}
+
+.city{
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
 }
