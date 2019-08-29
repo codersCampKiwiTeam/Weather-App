@@ -24,7 +24,6 @@ body {
     align-items: center;
     min-height: 100vh;
     min-width: 930px;
-    border: 2px solid red;
 }
 
 .con-a {
@@ -116,11 +115,17 @@ body {
 .con-k {
     display: flex;
     border: 2px solid black;
+    background: #6b6b6b;;
+    border-radius: 8px;
+    padding: 12px;
 }
 
 .con-m {
     display: flex;
     border: 2px solid black;
+    background: #6b6b6b;;
+    border-radius: 8px;
+    padding: 12px;
 }
 
 .con-img2 {
@@ -128,14 +133,36 @@ body {
     align-items: center;
 }
 
+.currentDay{
+    font-size: 48px;
+    font-weight: 900;
+    color: rgb(26, 26, 26);
+    margin: 0;
+}
+
+.dayOfTheWeek {
+    font-size: 24px;
+    font-weight: 400;
+    color: rgb(26, 26, 26);
+    margin: 0;
+}
+
 .con-img3 {
     display: flex;
     align-items: center;
 }
 
+.sun {
+    margin: 8px;
+    font-size: 64px;
+}
+
 .con-p {
     display: flex;
     border: 2px solid black;
+    background: #6b6b6b;
+    border-radius: 8px;
+    padding: 12px;
 }
 
 .con-img4 {
@@ -148,12 +175,51 @@ body {
     margin: 0;
 }
 
+.temp{
+    font-size: 64px;
+    margin: 0;
+}
+
 .temp2 {
     margin-bottom: 8px;
 }
 
 .city{
-    font-size: 48px;
+    font-size: 64px;
     margin: 0;
     padding: 0;
+}
+
+.fa-bolt, .fa-sun, .fa-wind {
+    font-size: 46px;
+    margin: 24px;
+}
+
+.temp3 {
+font-size: 24px;
+}
+
+.temp4 {
+    font-size: 24px;
+    }
+
+.sky2 {
+    font-size: 24px;
+}
+
+.sky3 {
+    font-size: 24px;
+}
+
+.sky4 {
+    font-size: 24px;
+}
+
+.temp5 {
+    font-size: 24px;
+    }
+
+.date {
+    margin-bottom: 4px;
+    letter-spacing: 8px;
 }
