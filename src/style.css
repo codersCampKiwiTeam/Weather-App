@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 html {
     box-sizing: border-box;
@@ -14,6 +14,7 @@ body {
     color: white;
     height: 100%;
     font-family: 'Lato', sans-serif;
+    font-size: 20px;
 }
 
 .main-container {
@@ -43,13 +44,18 @@ body {
 
 .header {
     margin: 42px auto 20px auto;
+    font-size: calc(1.2em + 1vw);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-shadow: 1px 1px 2px rgb(45, 45, 45);
 }
 
 .search {
-    font-size: 24px;
+    font-size: calc(0.5em + 1vw);
     padding: 12px;
     border: none;
     border-radius: 12px;
+    background-color: aliceblue;
 }
 
 .con-c {
@@ -66,13 +72,13 @@ body {
     display: flex;
     justify-content: center;
     border: 2px solid yellow;
+    padding-right: 15%;
 }
 
 .con-f {
     display: flex;
     color: whitesmoke;
-    text-shadow: 1px 1px 1px rgba(172, 172, 172, 0.308);
-    background: #104156;
+    background-color: rgba(11, 11, 17, 0.6);
     border-radius: 12px;
 }
 
@@ -83,16 +89,19 @@ body {
 }
 
 .sky {
+    font-size: calc(1em + 1vw);
+    text-shadow: 1px 1px 1px rgb(45, 45, 45);
+    letter-spacing: 0.1em;
     margin: auto auto;
-    font-size: 36px;
 }
 
 .con-h {
     display: flex;
     justify-content: center;
     width: 100%;
-    background: #486BA0;
+    background-color: rgba(11, 11, 17, 0.85);
     border: 2px solid purple;
+    padding-bottom: 10px;
 }
 
 .con-i {
@@ -109,13 +118,13 @@ body {
 
 .fa-moon {
     padding: 16px;
-    font-size: 32px;
+    font-size: calc(0.9em + 1vw);
 }
 
 .con-k {
     display: flex;
     border: 2px solid black;
-    background: #6b6b6b;;
+    background: rgb(11, 11, 17);
     border-radius: 8px;
     padding: 12px;
 }
@@ -123,7 +132,7 @@ body {
 .con-m {
     display: flex;
     border: 2px solid black;
-    background: #6b6b6b;;
+    background: rgb(11, 11, 17);
     border-radius: 8px;
     padding: 12px;
 }
@@ -131,36 +140,43 @@ body {
 .con-img2 {
     display: flex;
     align-items: center;
+    font-size: calc(0.9em + 1vw);
 }
 
 .currentDay{
-    font-size: 48px;
-    font-weight: 900;
+    font-size: calc(1.1em + 1vw);
+    font-weight: 700;
+    letter-spacing: 0.3em;
     color: rgb(26, 26, 26);
+    text-transform: uppercase;
     margin: 0;
 }
 
 .dayOfTheWeek {
-    font-size: 24px;
-    font-weight: 400;
+    font-size: calc(0.5em + 1vw);
+    font-weight: 600;
     color: rgb(26, 26, 26);
+    text-transform: lowercase;
     margin: 0;
 }
 
 .con-img3 {
     display: flex;
     align-items: center;
+    font-size: calc(0.9em + 1vw);
 }
 
 .sun {
     margin: 8px;
-    font-size: 64px;
+    font-size: calc(1.5em + 1vw);
+    text-shadow: 1px 1px 2px rgb(45, 45, 45);
+    letter-spacing: 0.12em;
 }
 
 .con-p {
     display: flex;
     border: 2px solid black;
-    background: #6b6b6b;
+    background-color: rgb(11, 11, 17);
     border-radius: 8px;
     padding: 12px;
 }
@@ -168,58 +184,89 @@ body {
 .con-img4 {
     display: flex;
     align-items: center;
+    font-size: calc(0.9em + 1vw);
 }
 
 .day {
-    font-size: 32px;
+    font-size: calc(1em + 1vw);
+    text-shadow: 1px 1px 1px rgb(45, 45, 45);
+    letter-spacing: 0.1em;
     margin: 0;
 }
 
 .temp{
-    font-size: 64px;
+    font-size: calc(3.2em + 1vw);
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgb(45, 45, 45);
     margin: 0;
 }
 
 .temp2 {
+    font-size: calc(1em + 1vw);
+    text-shadow: 1px 1px 1px rgb(45, 45, 45);
     margin-bottom: 8px;
 }
 
 .city{
-    font-size: 64px;
+    font-size: calc(2.4em + 1vw);
+    font-weight: 700;
+    text-shadow: 1px 1px 5px rgb(140, 140, 140);
+    text-transform: capitalize;
     margin: 0;
     padding: 0;
 }
 
 .fa-bolt, .fa-sun, .fa-wind {
-    font-size: 46px;
+    font-size: calc(0.9em + 1vw);
     margin: 24px;
 }
 
 .temp3 {
-font-size: 24px;
+    font-size: calc(0.9em + 1vw);
+    font-weight: 500;
+    text-shadow: 3px 3px black;
+    letter-spacing: 0.1em;
 }
 
 .temp4 {
-    font-size: 24px;
+    font-size: calc(0.9em + 1vw);
+    font-weight: 500;
+    text-shadow: 3px 3px black;
+    letter-spacing: 0.1em;
     }
 
 .sky2 {
-    font-size: 24px;
+    font-size: calc(0.6em + 1vw);
+    text-shadow: 3px 3px black;
+    letter-spacing: 0.1em;
+    font-weight: 400;
 }
 
 .sky3 {
-    font-size: 24px;
+    font-size: calc(0.6em + 1vw);
+    text-shadow: 3px 3px black;
+    letter-spacing: 0.1em;
+    font-weight: 400;
 }
 
 .sky4 {
-    font-size: 24px;
+    font-size: calc(0.6em + 1vw);
+    text-shadow: 3px 3px black;
+    letter-spacing: 0.1em;
+    font-weight: 400;
 }
 
 .temp5 {
-    font-size: 24px;
+    font-size: calc(0.9em + 1vw);
+    font-weight: 500;
+    text-shadow: 3px 3px black;
+    letter-spacing: 0.1em;
     }
 
 .date {
     margin-bottom: 4px;
-    letter-spacing: 8px;
+    letter-spacing: 0.11em;
+    font-weight: 300;
+    font-size: calc(0.65em + 1vw);
+    text-shadow: 1px 1px 5px rgb(140, 140, 140);
 }
