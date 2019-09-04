@@ -137,8 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		console.log(Math.round(weatherInfo.incomingDays[0].day.avarageTemperature));
     }
 	
-	document.querySelector('button').addEventListener('click', () => {
-		
+	document.querySelector('.searchCity').addEventListener('submit', (e) => {
+		e.preventDefault();
 		let searchTerm = document.querySelector('.search').value;
 		
 		if(searchTerm)
