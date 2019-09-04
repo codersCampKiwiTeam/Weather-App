@@ -134,7 +134,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		//Tutaj weźmiemy obiekt weatherInfo i wyciągamy z niego dane żeby sobie je wyswietlić na stronie.
 		//Na razie wklejam tu tylko console log, żeby można było wyswietlić w konsoli jak obiekt jest zbudowany i czekam na ostateczne nazwy klas w htmlu żeby to "powklejać" w odpowiednie miejsca.
 		console.log(weatherInfo);
-		console.log(Math.round(weatherInfo.incomingDays[0].day.avarageTemperature));
+		
+		document.querySelector('.city').innerText = weatherInfo.cityName;
+		document.querySelector('.temp3').innerText = Math.round(weatherInfo.incomingDays[0].day.avarageTemperature)+ '℃';
+		document.querySelector('.temp4').innerText = Math.round(weatherInfo.incomingDays[1].day.avarageTemperature)+ '℃';
+		document.querySelector('.temp5').innerText = Math.round(weatherInfo.incomingDays[2].day.avarageTemperature)+ '℃';
+		document.querySelector('.sky2').innerText = weatherInfo.incomingDays[0].day.description;
+		document.querySelector('.sky3').innerText = weatherInfo.incomingDays[1].day.description;
+		document.querySelector('.sky4').innerText = weatherInfo.incomingDays[2].day.description;
+		
     }
 	
 	document.querySelector('.searchCity').addEventListener('submit', (e) => {
