@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		let weatherInfo = { sunset: undefined, sunrise: undefined, cityName: undefined, today: undefined, todaysNight: undefined, incomingDays: [] }; 
 		
 		//Wywołujemy pierwszy webservice żeby pobrać sunrise i sunset, oraz dane aktualej pogody.
-		fetch(`http://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTerm}&APPID=${appId}&units=${units}&lang=${langCode}`) 
+		fetch(`https://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTerm}&APPID=${appId}&units=${units}&lang=${langCode}`) 
 		.then((result) => {return result.json()})
 		.then(result => {
 			
@@ -45,10 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
 				minTemperature: result.main.temp_min,
 				currentTemperature: result.main.temp,
 				description: result.weather[0].description,
-				iconUrl: 'http://openweathermap.org/img/wn/' + result.weather[0].icon +'.png'
+				iconUrl: 'https://openweathermap.org/img/wn/' + result.weather[0].icon +'.png'
 			};
 			//Wywołujemy drugi webserive, aby pobrać dane na kolejne dni, ale również, żeby pozyskać dane na dzisiejszą noc.
-			fetch(`http://api.openweathermap.org/data/2.5/forecast?${searchMethod}=${searchTerm}&APPID=${appId}&units=${units}&lang=${langCode}`)
+			fetch(`https://api.openweathermap.org/data/2.5/forecast?${searchMethod}=${searchTerm}&APPID=${appId}&units=${units}&lang=${langCode}`)
 			.then((result) => {return result.json()})
 			.then(result =>
 			{  
