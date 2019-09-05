@@ -12,14 +12,14 @@ dayOfWeek.textContent = dayList[today];
 //Tomorrow
 let tomorrow = new Date(currentDate);
 tomorrow.setDate(currentDate.getDate() + 1);
-tomorrowNew.textContent = `${tomorrow.getDay()<10?'0'+tomorrow.getDay():tomorrow.getDay()}.${tomorrow.getMonth()<10?'0'+tomorrow.getMonth():tomorrow.getMonth()}.${tomorrow.getFullYear()}`;
+tomorrowNew.textContent = `${tomorrow.getDate()<10?'0'+tomorrow.getDate():tomorrow.getDate()}.${(tomorrow.getMonth()+1)<10?'0'+(tomorrow.getMonth()+1):(tomorrow.getMonth()+1)}.${tomorrow.getFullYear()}`;
 
 //Day after tomorrow
 let nextDay = new Date(currentDate);
 nextDay.setDate(currentDate.getDate() + 2);
-nextDayNew.textContent = `${nextDay.getDay()<10?'0'+nextDay.getDay():nextDay.getDay()}.${nextDay.getMonth()<10?'0'+nextDay.getMonth():nextDay.getMonth()}.${nextDay.getFullYear()}`;
+nextDayNew.textContent = `${nextDay.getDate()<10?'0'+nextDay.getDate():nextDay.getDate()}.${(nextDay.getMonth()+1)<10?'0'+(nextDay.getMonth()+1):(nextDay.getMonth()+1)}.${nextDay.getFullYear()}`;
 
 //3 day
 let nextDay2 = new Date(currentDate);
 nextDay2.setDate(currentDate.getDate() + 3);
-nextDay2New.textContent = `${nextDay2.getDay()<10?'0'+nextDay2.getDay():nextDay2.getDay()}.${nextDay2.getMonth()<10?'0'+nextDay2.getMonth():nextDay2.getMonth()}.${nextDay2.getFullYear()}`;
+nextDay2New.textContent = `${nextDay2.getDate()<10?'0'+nextDay2.getDate():nextDay2.getDate()}.${(nextDay2.getMonth()+1)<10?'0'+(nextDay2.getMonth()+1):(nextDay2.getMonth()+1)}.${nextDay2.getFullYear()}`;
