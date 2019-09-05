@@ -167,8 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			navigator.geolocation.getCurrentPosition(position => {
 				lon = position.coords.longitude;
 				lat = position.coords.latitude;
-				api1 = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${appId}&units=${units}&lang=${langCode}`;
-				api2 = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&APPID=${appId}&units=${units}&lang=${langCode}`;
+				const proxy = 'https://cors-anywhere.herokuapp.com/';
+				api1 = `${proxy}http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${appId}&units=${units}&lang=${langCode}`;
+				api2 = `${proxy}http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&APPID=${appId}&units=${units}&lang=${langCode}`;
 				searchWeather(lat, displayWeatherInfo)
 			})
 		}
