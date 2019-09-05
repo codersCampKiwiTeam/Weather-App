@@ -31,15 +31,8 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    border: 1px solid blue;
 }
 
-.con-b {
-    display: flex;
-    width: 40%;
-    justify-content: center;
-    flex-direction: column;
-}
 
 .header {
     margin: 42px auto 20px auto;
@@ -78,18 +71,16 @@ button {
 .con-c {
     display: flex;
     width: 80%;
-    border: 2px solid purple;
 }
 
 .con-d {
     width: 40%;
-    border: 2px solid orange;
+    margin: 28px 0;
 }
 
 .con-e {
     display: flex;
     justify-content: center;
-    border: 2px solid yellow;
     padding-right: 15%;
 }
 
@@ -119,7 +110,6 @@ button {
     justify-content: center;
     width: 100%;
     background-color: rgba(11, 11, 17, 0.85);
-    border: 2px solid purple;
     padding-bottom: 10px;
 }
 
@@ -130,7 +120,13 @@ button {
         width: 90%;
         display: flex;
         justify-content: space-between;
-        border: 2px solid blue;
+    }
+
+    .con-b {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 50%;
     }
 
     .con-j {
@@ -153,7 +149,6 @@ button {
         flex-direction: column;
         align-content: space-between;
         align-items: center;
-        border: 2px solid blue;
     }
 
     .main-container {
@@ -162,16 +157,15 @@ button {
     }
 
     .con-b {
-        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 80%;
     }
 
     .sky {
         font-size: calc(0.7em + 1vw);
         padding: 0 32px;
-    }
-
-    .con-b {
-        width: 60%;
     }
 
     .con-c {
