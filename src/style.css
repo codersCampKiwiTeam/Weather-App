@@ -72,6 +72,7 @@ button {
   }
 
 .con-c {
+    display: flex;
     width: 80%;
     border: 2px solid purple;
 }
@@ -102,7 +103,8 @@ button {
 }
 
 .sky {
-    font-size: calc(1em + 1vw);
+    font-size: calc(0.5em + 1vw);
+    padding: 0 10px;
     text-shadow: 1px 1px 1px rgb(45, 45, 45);
     letter-spacing: 0.1em;
     margin: auto auto;
@@ -117,23 +119,71 @@ button {
     padding-bottom: 10px;
 }
 
-@media screen and (min-width: 400px) {
+
+
+@media screen and (min-width: 768px) {
     .con-i {
         width: 90%;
         display: flex;
         justify-content: space-between;
         border: 2px solid blue;
     }
+
+    .con-j {
+        width: 30%;
+    }
+    
+    .con-zz {
+        width: 30%;
+    }
+    
+    .con-o {
+        width: 30%;
+    }
 }
 
-@media screen and (max-width: 399px) {
+@media screen and (max-width: 767px) {
     .con-i {
         width: 90%;
         display: flex;
         flex-direction: column;
-        align-content: space-around;
+        align-content: space-between;
         align-items: center;
         border: 2px solid blue;
+    }
+
+    .main-container {
+        min-height: 100vh;
+        min-width: 400px;
+    }
+
+    .sky {
+        font-size: calc(0.7em + 1vw);
+        padding: 0 32px;
+    }
+
+    .con-b {
+        width: 60%;
+    }
+
+    .con-c {
+        justify-content: center;
+    }
+
+    .con-d {
+        width: 100%;
+    }
+
+    .con-j {
+        width: 80%;
+    }
+    
+    .con-zz {
+        width: 80%;
+    }
+    
+    .con-o {
+        width: 80%;
     }
 }
 
@@ -148,7 +198,9 @@ button {
 }
 
 .con-k {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
     border: 2px solid black;
     background: rgb(11, 11, 17);
     border-radius: 8px;
@@ -156,7 +208,9 @@ button {
 }
 
 .con-m {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
     border: 2px solid black;
     background: rgb(11, 11, 17);
     border-radius: 8px;
@@ -200,7 +254,9 @@ button {
 }
 
 .con-p {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
     border: 2px solid black;
     background-color: rgb(11, 11, 17);
     border-radius: 8px;
