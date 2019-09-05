@@ -39,7 +39,6 @@ body {
     width: 40%;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid brown;
 }
 
 .header {
@@ -50,9 +49,15 @@ body {
     text-shadow: 1px 1px 2px rgb(45, 45, 45);
 }
 
+.searchCity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .search {
     font-size: calc(0.5em + 1vw);
-    width: 90%;
+    width: 85%;
     padding: 12px;
     border: none;
     border-radius: 12px;
@@ -63,7 +68,6 @@ body {
 button {
     float: left;
     width: 10%;
-    padding-top: 8px;
     color: aliceblue;
     background-color: rgba(0,0,0,0);
     border: 0px;
@@ -155,6 +159,10 @@ button {
     .main-container {
         min-height: 100vh;
         min-width: 0;
+    }
+
+    .con-b {
+        width: 50%;
     }
 
     .sky {
