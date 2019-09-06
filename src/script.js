@@ -138,9 +138,42 @@ document.addEventListener('DOMContentLoaded', () => {
 	function getRandomNr(min, max) {
 		return Math.floor(Math.random() * (max - min + 1)) + min;
 	} //funkcja losująca losową liczbę, potrzebna do zmieniania tła
+	function changeBackground(weatherInfo){
+		let imageNr=getRandomNr(1,10);
+		switch(weatherInfo.today.weatherKind){
+			case 1:
+				document.querySelector('.main-container').backgroundImage='url("src/images/thunderstorm/'+imageNr+'.jpg")';
+				break;
+					
+			case 2:
+				document.querySelector('.main-container').style.backgroundImage='url("src/images/drizzle/'+imageNr+'.jpg")';
+				break;
+
+			case 3:
+				document.querySelector('.main-container').style.backgroundImage='url("src/images/rain/'+imageNr+'.jpg")';
+				break;    
+				
+			case 4: 
+				document.querySelector('.main-container').style.backgroundImage='url("src/images/snow/'+imageNr+'.jpg")';
+				break;
+			case 5:
+				document.querySelector('.main-container').style.backgroundImage='url("src/images/unclear/'+imageNr+'.jpg")';
+				break;         
+			case 6:
+				
+				document.querySelector('.main-container').style.backgroundImage='url("src/images/clear/'+imageNr+'.jpg")';
+				break;
+			case 7:
+				
+				document.querySelector('.main-container').style.bacgroundImage='url("src/images/clouds/'+imageNr+'.jpg")';
+				
+				break;
+		}
+	}
+	
 
 	function displayWeatherInfo(weatherInfo) {
-
+		changeBackground(weatherInfo);
 		//Tutaj weźmiemy obiekt weatherInfo i wyciągamy z niego dane żeby sobie je wyswietlić na stronie.
 		//Na razie wklejam tu tylko console log, żeby można było wyswietlić w konsoli jak obiekt jest zbudowany i czekam na ostateczne nazwy klas w htmlu żeby to "powklejać" w odpowiednie miejsca.
 		console.log(weatherInfo);
