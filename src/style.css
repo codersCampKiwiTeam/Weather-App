@@ -62,11 +62,11 @@ button {
     float: left;
     width: 10%;
     color: aliceblue;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     border: 0px;
     font-size: 1.5em;
     cursor: pointer;
-  }
+}
 
 .con-c {
     display: flex;
@@ -132,11 +132,11 @@ button {
     .con-j {
         width: 30%;
     }
-    
+
     .con-zz {
         width: 30%;
     }
-    
+
     .con-o {
         width: 30%;
     }
@@ -179,11 +179,11 @@ button {
     .con-j {
         width: 80%;
     }
-    
+
     .con-zz {
         width: 80%;
     }
-    
+
     .con-o {
         width: 80%;
     }
@@ -225,7 +225,7 @@ button {
     font-size: calc(0.9em + 1vw);
 }
 
-.currentDay{
+.currentDay {
     font-size: calc(1.1em + 1vw);
     font-weight: 700;
     letter-spacing: 0.3em;
@@ -278,7 +278,7 @@ button {
     margin: 0;
 }
 
-.temp{
+.temp {
     font-size: calc(3.2em + 1vw);
     font-weight: 500;
     text-shadow: 1px 1px 2px rgb(45, 45, 45);
@@ -291,7 +291,7 @@ button {
     margin-bottom: 8px;
 }
 
-.city{
+.city {
     font-size: calc(2.4em + 1vw);
     font-weight: 700;
     text-shadow: 1px 1px 5px rgb(140, 140, 140);
@@ -300,9 +300,12 @@ button {
     padding: 0;
 }
 
-.fa-bolt, .fa-sun, .fa-wind {
-    font-size: calc(0.9em + 1vw);
-    margin: 24px;
+img.con-img2,
+img.con-img3,
+img.con-img4 {
+    min-height: 100px;
+    height: 15vh;
+    margin-right: 24px;
 }
 
 .temp3 {
@@ -317,7 +320,7 @@ button {
     font-weight: 500;
     text-shadow: 3px 3px black;
     letter-spacing: 0.1em;
-    }
+}
 
 .sky2 {
     font-size: calc(0.6em + 1vw);
@@ -345,7 +348,7 @@ button {
     font-weight: 500;
     text-shadow: 3px 3px black;
     letter-spacing: 0.1em;
-    }
+}
 
 .date {
     margin-bottom: 4px;
