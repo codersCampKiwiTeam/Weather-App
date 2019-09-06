@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	let api2;
 
 	function searchWeather(searchTerm, displayWeatherInfo) {
+
 		//Tak będzie wyglądał obiekt reprezentujący dane zwracane z tej funkcji (na razie wszystkie pola niech będą undefined).
 		let weatherInfo = {
 			sunset: undefined,
@@ -51,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					minTemperature: result.main.temp_min,
 					currentTemperature: result.main.temp,
 					description: result.weather[0].description,
-					iconUrl: 'https://openweathermap.org/img/wn/' + result.weather[0].icon + '.png'
+					iconUrl: 'https://openweathermap.org/img/wn/' + result.weather[0].icon + '@2x' + '.png'
 				};
 				//Wywołujemy drugi webserive, aby pobrać dane na kolejne dni, ale również, żeby pozyskać dane na dzisiejszą noc.
 				fetch(api2)
@@ -86,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 						}
 						//Tutaj wywołujemy przekazaną w argumentach metode wyświetlającą dane.
 						displayWeatherInfo(weatherInfo);
+
 					});
 			});
 	}
@@ -116,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		return {
 			avarageTemperature: sum / data.length, //Srednia temperatura (suma przez ilość wpisów).
 			date: new Date(data[0].dt * 1000).toISOString().substring(0, 10), //Data 
-			iconUrl: 'https://openweathermap.org/img/wn/' + goruedByDescription[mostPopulatedGroupIndex][0].weather[0].icon + '@2x'+'.png', //Ikonka skojarzona z wpisem, którego opis pojawiał się najczęściej.
+			iconUrl: 'https://openweathermap.org/img/wn/' + goruedByDescription[mostPopulatedGroupIndex][0].weather[0].icon + '@2x' + '.png', //Ikonka skojarzona z wpisem, którego opis pojawiał się najczęściej.
 			description: goruedByDescription[mostPopulatedGroupIndex][0].weather[0].description //Opis pojawiający się najczęściej.
 		};
 	}
@@ -173,6 +175,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	function displayWeatherInfo(weatherInfo) {
+		document.querySelector('.con-c').classList.remove('hide');
+		document.querySelector('.con-h').classList.remove('hide');
+
 		changeBackground(weatherInfo);
 		//Tutaj weźmiemy obiekt weatherInfo i wyciągamy z niego dane żeby sobie je wyswietlić na stronie.
 		//Na razie wklejam tu tylko console log, żeby można było wyswietlić w konsoli jak obiekt jest zbudowany i czekam na ostateczne nazwy klas w htmlu żeby to "powklejać" w odpowiednie miejsca.
@@ -206,19 +211,25 @@ document.addEventListener('DOMContentLoaded', () => {
 				const proxy = 'https://cors-anywhere.herokuapp.com/';
 				api1 = `${proxy}http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${appId}&units=${units}&lang=${langCode}`;
 				api2 = `${proxy}http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&APPID=${appId}&units=${units}&lang=${langCode}`;
-				searchWeather(lat, displayWeatherInfo)
+				searchWeather(lat, displayWeatherInfo);
+				document.querySelector('.con-c').classList.add('hide');
+				document.querySelector('.con-h').classList.add('hide');
 			})
+
 		}
 	})
 
 	document.querySelector('.searchCity').addEventListener('submit', (e) => {
 		e.preventDefault();
+
 		let searchTerm = document.querySelector('.search').value;
 		api1 = `https://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTerm}&APPID=${appId}&units=${units}&lang=${langCode}`;
 		api2 = `https://api.openweathermap.org/data/2.5/forecast?${searchMethod}=${searchTerm}&APPID=${appId}&units=${units}&lang=${langCode}`;
 
 		if (searchTerm)
 			searchWeather(searchTerm, displayWeatherInfo);
-
-	})
+		document.querySelector('.search').value = '';
+		document.querySelector('.con-c').classList.add('hide');
+		document.querySelector('.con-h').classList.add('hide');
+	});
 })
