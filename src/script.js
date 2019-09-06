@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		return {
 			avarageTemperature: sum / data.length, //Srednia temperatura (suma przez ilość wpisów).
 			date: new Date(data[0].dt * 1000).toISOString().substring(0, 10), //Data 
-			iconUrl: 'https://openweathermap.org/img/wn/' + goruedByDescription[mostPopulatedGroupIndex][0].weather[0].icon + '.png', //Ikonka skojarzona z wpisem, którego opis pojawiał się najczęściej.
+			iconUrl: 'https://openweathermap.org/img/wn/' + goruedByDescription[mostPopulatedGroupIndex][0].weather[0].icon + '@2x'+'.png', //Ikonka skojarzona z wpisem, którego opis pojawiał się najczęściej.
 			description: goruedByDescription[mostPopulatedGroupIndex][0].weather[0].description //Opis pojawiający się najczęściej.
 		};
 	}
