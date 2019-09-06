@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				break;
 			case 7:
 				
-				document.querySelector('.main-container').style.bacgroundImage='url("src/images/clouds/'+imageNr+'.jpg")';
+				document.querySelector('.main-container').style.backgroundImage='url("src/images/clouds/'+imageNr+'.jpg")';
 				
 				break;
 		}
