@@ -138,39 +138,39 @@ document.addEventListener('DOMContentLoaded', () => {
 	function getRandomNr(min, max) {
 		return Math.floor(Math.random() * (max - min + 1)) + min;
 	} //funkcja losująca losową liczbę, potrzebna do zmieniania tła
-	function changeBackground(weatherInfo){
-		let imageNr=getRandomNr(1,10);
-		switch(weatherInfo.today.weatherKind){
+	function changeBackground(weatherInfo) {
+		let imageNr = getRandomNr(1, 10);
+		switch (weatherInfo.today.weatherKind) {
 			case 1:
-				document.querySelector('.main-container').backgroundImage='url("src/images/thunderstorm/'+imageNr+'.jpg")';
+				document.querySelector('.main-container').backgroundImage = 'url("src/images/thunderstorm/' + imageNr + '.jpg")';
 				break;
-					
+
 			case 2:
-				document.querySelector('.main-container').style.backgroundImage='url("src/images/drizzle/'+imageNr+'.jpg")';
+				document.querySelector('.main-container').style.backgroundImage = 'url("src/images/drizzle/' + imageNr + '.jpg")';
 				break;
 
 			case 3:
-				document.querySelector('.main-container').style.backgroundImage='url("src/images/rain/'+imageNr+'.jpg")';
-				break;    
-				
-			case 4: 
-				document.querySelector('.main-container').style.backgroundImage='url("src/images/snow/'+imageNr+'.jpg")';
+				document.querySelector('.main-container').style.backgroundImage = 'url("src/images/rain/' + imageNr + '.jpg")';
+				break;
+
+			case 4:
+				document.querySelector('.main-container').style.backgroundImage = 'url("src/images/snow/' + imageNr + '.jpg")';
 				break;
 			case 5:
-				document.querySelector('.main-container').style.backgroundImage='url("src/images/unclear/'+imageNr+'.jpg")';
-				break;         
+				document.querySelector('.main-container').style.backgroundImage = 'url("src/images/unclear/' + imageNr + '.jpg")';
+				break;
 			case 6:
-				
-				document.querySelector('.main-container').style.backgroundImage='url("src/images/clear/'+imageNr+'.jpg")';
+
+				document.querySelector('.main-container').style.backgroundImage = 'url("src/images/clear/' + imageNr + '.jpg")';
 				break;
 			case 7:
-				
-				document.querySelector('.main-container').style.backgroundImage='url("src/images/clouds/'+imageNr+'.jpg")';
-				
+
+				document.querySelector('.main-container').style.backgroundImage = 'url("src/images/clouds/' + imageNr + '.jpg")';
+
 				break;
 		}
 	}
-	
+
 
 	function displayWeatherInfo(weatherInfo) {
 		changeBackground(weatherInfo);
@@ -189,6 +189,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		document.querySelector('.sky2').innerText = weatherInfo.incomingDays[0].day.description;
 		document.querySelector('.sky3').innerText = weatherInfo.incomingDays[1].day.description;
 		document.querySelector('.sky4').innerText = weatherInfo.incomingDays[2].day.description;
+		document.querySelector('img.con-img2').src = weatherInfo.incomingDays[0].day.iconUrl;
+		document.querySelector('img.con-img3').src = weatherInfo.incomingDays[1].day.iconUrl;
+		document.querySelector('img.con-img4').src = weatherInfo.incomingDays[2].day.iconUrl;
 
 
 	}
