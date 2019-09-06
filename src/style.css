@@ -71,6 +71,7 @@ button {
 .con-c {
     display: flex;
     width: 80%;
+    transition: all .5s linear;
 }
 
 .con-d {
@@ -111,6 +112,7 @@ button {
     width: 100%;
     background-color: rgba(11, 11, 17, 0.85);
     padding-bottom: 10px;
+    transition: all .5s linear;
 }
 
 
@@ -170,6 +172,7 @@ button {
 
     .con-c {
         justify-content: center;
+        transition: all .5s linear;
     }
 
     .con-d {
@@ -356,4 +359,8 @@ img.con-img4 {
     font-weight: 300;
     font-size: calc(0.65em + 1vw);
     text-shadow: 1px 1px 5px rgb(140, 140, 140);
+}
+
+.hide {
+    opacity: 0;
 }
