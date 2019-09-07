@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		let icon1 = new Skycons({'color':'darkorange'});
 		let icon2=new Skycons({'color':'whitesmoke'});
 		icon2.set('iconNight', 'partly-cloudy-night');
-
+		document.querySelector('.main-container').style.backgroundSize = 'cover';
 		switch (weatherInfo.today.weatherKind) {
 			case 1:
 				document.querySelector('.main-container').style.backgroundImage = 'url("src/images/thunderstorm/' + imageNr + '.jpg")';
