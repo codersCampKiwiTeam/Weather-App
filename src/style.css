@@ -81,7 +81,7 @@ button {
 
 .con-e {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     padding-right: 15%;
 }
 

@@ -142,35 +142,46 @@ document.addEventListener('DOMContentLoaded', () => {
 	} //funkcja losująca losową liczbę, potrzebna do zmieniania tła
 	function changeBackground(weatherInfo) {
 		let imageNr = getRandomNr(1, 10);
+		let icon1 = new Skycons({'color':'darkorange'});
+		let icon2=new Skycons({'color':'silver'});
+		icon2.set('iconNight', 'partly-cloudy-night');
 		switch (weatherInfo.today.weatherKind) {
 			case 1:
-				document.querySelector('.main-container').backgroundImage = 'url("src/images/thunderstorm/' + imageNr + '.jpg")';
+				document.querySelector('.main-container').style.backgroundImage = 'url("src/images/thunderstorm/' + imageNr + '.jpg")';
+				icon2.set('iconDay', 'wind');
 				break;
 
 			case 2:
 				document.querySelector('.main-container').style.backgroundImage = 'url("src/images/drizzle/' + imageNr + '.jpg")';
+				icon2.set('iconDay', 'sleek');
 				break;
 
 			case 3:
 				document.querySelector('.main-container').style.backgroundImage = 'url("src/images/rain/' + imageNr + '.jpg")';
+				icon2.set('iconDay', 'rain');
 				break;
 
 			case 4:
 				document.querySelector('.main-container').style.backgroundImage = 'url("src/images/snow/' + imageNr + '.jpg")';
+				icon2.set('iconDay', 'snow');
 				break;
 			case 5:
 				document.querySelector('.main-container').style.backgroundImage = 'url("src/images/unclear/' + imageNr + '.jpg")';
+				icon2.set('iconDay', 'fog');
 				break;
 			case 6:
 
 				document.querySelector('.main-container').style.backgroundImage = 'url("src/images/clear/' + imageNr + '.jpg")';
+				icon1.set('iconDay', 'clear-day');
 				break;
 			case 7:
 
 				document.querySelector('.main-container').style.backgroundImage = 'url("src/images/clouds/' + imageNr + '.jpg")';
-
+				icon2.set('iconDay', 'cloudy');
 				break;
 		}
+		icon1.play();
+		icon2.play();
 	}
 
 

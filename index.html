@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="src/normalize.css">
     <link rel="stylesheet" href="src/style.css">
     <script src="https://kit.fontawesome.com/9d28710bcd.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
     <script defer src="src/date.js"></script>
     <script defer src="src/script.js"></script>
     <title>Weather App</title>
@@ -33,12 +34,15 @@
                 <h2 class="currentDay">DZISIAJ</h2>
                 <h2 class="dayOfTheWeek">poniedziałek</h2>
                 <div class="con-e">
+                    <div class="con-img">
+                        <canvas id="iconDay"width="70" height="70"></canvas>
+                    </div>
                     <h1 class="temp"></h1>
                 </div>
                 <h2 class="sun"></h2>
                 <div class="con-f">
                     <div class="con-img">
-                        <i class="fas fa-moon"></i>
+                        <canvas id="iconNight"width="50" height="50"></canvas>
                     </div>
                     <div class="con-g">
                         <h4 class="day">noc</h4>
