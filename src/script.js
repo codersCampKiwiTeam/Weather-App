@@ -27,7 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				//Ustalamy weatherkind (żeby móc potem zmieniać obrazki tła).
 				let wk = 1;
-				if (result.weather[0].id > 800) {
+				if(result.weather[0].id == 804||result.weather[0].id == 803) {
+					wk = 8;
+				}else if (result.weather[0].id == 801||result.weather[0].id == 802) {
 					wk = 7;
 				} else if (result.weather[0].id == 800) {
 					wk = 6;
@@ -52,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					minTemperature: result.main.temp_min,
 					currentTemperature: result.main.temp,
 					description: result.weather[0].description,
-					iconUrl: 'https://openweathermap.org/img/wn/' + result.weather[0].icon + '@2x' + '.png'
+					
 				};
 				//Wywołujemy drugi webserive, aby pobrać dane na kolejne dni, ale również, żeby pozyskać dane na dzisiejszą noc.
 				fetch(api2)
@@ -145,6 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		let icon1 = new Skycons({'color':'darkorange'});
 		let icon2=new Skycons({'color':'silver'});
 		icon2.set('iconNight', 'partly-cloudy-night');
+
 		switch (weatherInfo.today.weatherKind) {
 			case 1:
 				document.querySelector('.main-container').style.backgroundImage = 'url("src/images/thunderstorm/' + imageNr + '.jpg")';
@@ -176,7 +179,11 @@ document.addEventListener('DOMContentLoaded', () => {
 				break;
 			case 7:
 
-				document.querySelector('.main-container').style.backgroundImage = 'url("src/images/clouds/' + imageNr + '.jpg")';
+				document.querySelector('.main-container').style.backgroundImage = 'url("src/images/smallClouds/' + imageNr + '.jpg")';
+				icon2.set('iconDay', 'partly-cloudy-day');
+				break;
+			case 8:
+				document.querySelector('.main-container').style.backgroundImage = 'url("src/images/bigClouds/' + imageNr + '.jpg")';
 				icon2.set('iconDay', 'cloudy');
 				break;
 		}
@@ -193,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		//Tutaj weźmiemy obiekt weatherInfo i wyciągamy z niego dane żeby sobie je wyswietlić na stronie.
 		//Na razie wklejam tu tylko console log, żeby można było wyswietlić w konsoli jak obiekt jest zbudowany i czekam na ostateczne nazwy klas w htmlu żeby to "powklejać" w odpowiednie miejsca.
 		console.log(weatherInfo);
-
+		
 		document.querySelector('.city').innerText = weatherInfo.cityName;
 		document.querySelector('.temp').innerText = Math.round((weatherInfo.today.maxTemperature + weatherInfo.today.minTemperature) / 2) + '℃';
 		document.querySelector('.temp2').innerText = Math.round((weatherInfo.todaysNight.avarageTemperature)) + '℃';
