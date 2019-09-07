@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	function changeBackground(weatherInfo) {
 		let imageNr = getRandomNr(1, 10);
 		let icon1 = new Skycons({'color':'darkorange'});
-		let icon2=new Skycons({'color':'silver'});
+		let icon2=new Skycons({'color':'whitesmoke'});
 		icon2.set('iconNight', 'partly-cloudy-night');
 
 		switch (weatherInfo.today.weatherKind) {
