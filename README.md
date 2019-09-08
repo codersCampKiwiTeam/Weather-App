@@ -1,11 +1,11 @@
 # First KIWI  project
 ![alt text](https://github.com/codersCampKiwiTeam/Weather-App/blob/master/src/images/kiwiLogo.jpg "KiwiPower!")                  
 
-## Weather-App
-Application that shows weather parameters (like `temperature`, `moisure` or `cloudiness`) in provided by user city.
+# Kiwi Weather
+### The weather forecast app created by Kiwi Team
 
-## Does the kiwi fly?
-If you're not sure, please click [here](https://www.youtube.com/watch?v=go52mHlKDEo "Does the kiwi fly?").
-
-## License
-MIT.
+ 1. Functionalities: 
+![functionalities](https://raw.githubusercontent.com/codersCampKiwiTeam/Weather-App/master/screen1.png)
+2.  Visualisation
+![enter image description here](https://github.com/codersCampKiwiTeam/Weather-App/blob/master/screen2.png?raw=true)
+ 
