@@ -1,3 +1,8 @@
+
+import './style.css';
+import './normalize.css';
+import './date.js'
+
 document.addEventListener('DOMContentLoaded', () => {
 	let appId = 'd56b410a93a6e32c305bbb37968f39d4'; //klucz z OpenWeather
 	let units = 'metric';
@@ -76,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 						weatherInfo.todaysNight = ParseWeatherData(tonightEntries);
 
 						//Nasępnie iteruję po tablicach reprezentujących pozostałe dni, z pominięciem pierwszego elementu, bo dane dla "dzisiaj" już ustaliliśmy.
-						for (x = 1; x < groupByDate.length - 1; x++) {
+						for (let x = 1; x < groupByDate.length - 1; x++) {
 							const sunrise = weatherInfo.sunrise + x * 86400; //Przeliczam kiedy następuje wschód danego dnia.
 							const sunset = weatherInfo.sunset + x * 86400; //Przeliczam kiedy następuje zachód danego dnia.
 							let dayEntries = groupByDate[x].filter(item => item.dt <= sunset && item.dt >= sunrise); //Wyfiltrowywuję wpisy dotyczące dnia.
@@ -103,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		//W pętli zliczamy ile elementów trafiło do grupy i zapamiętujemy ta wartość oraz index jeśli wcześniej zapamiętana wartość jest mniejsza.
 		let count = 0;
-		for (i = 0; i < goruedByDescription.length; i++) {
+		for (let i = 0; i < goruedByDescription.length; i++) {
 			if (count < goruedByDescription[i].length) {
 				count = goruedByDescription[i].length;
 				mostPopulatedGroupIndex = i;
@@ -112,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		//Tutaj sumujemy wszystkie temperatury ze wszystkich wpisów (żeby potem średnią obliczyć).
 		let sum = 0;
-		for (i = 0; i < data.length; i++) {
+		for (let i = 0; i < data.length; i++) {
 			sum += data[i].main.temp;
 		}
 
