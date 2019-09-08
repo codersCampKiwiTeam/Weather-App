@@ -19,7 +19,7 @@ body {
 
 @media screen and (max-width: 768px) {
     .main-container {
-        background-image: url(../src/images/kiwiLogo.jpg);
+        background-image: url(./images/kiwiLogo.jpg);
         background-size: contain;
         background-repeat: no-repeat;
         background-position-y: 30%;
@@ -33,7 +33,7 @@ body {
 
 @media screen and (min-width: 768px) {
     .main-container {
-        background-image: url(../src/images/kiwiLogo.jpg);
+        background-image: url(./images/kiwiLogo.jpg);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
